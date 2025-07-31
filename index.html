@@ -2,23 +2,79 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>極限量私密寫真(大尺)</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 50px; }
-    #gallery { display: none; }
-    img { max-width: 100%; margin: 10px 0; }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    input, button {
+      padding: 12px;
+      font-size: 16px;
+      width: 80%;
+      max-width: 300px;
+      margin: 10px auto;
+      display: block;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #gallery img,
+    .preview-gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      display: inline-block;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .preview-gallery {
+      margin-top: 20px;
+    }
+    h1, h2 {
+      margin-top: 20px;
+    }
+    #error {
+      color: red;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 40px;
+      }
+    }
   </style>
 </head>
 <body>
   <div id="login">
     <h2>請輸入密碼以查看私密圖片</h2>
+    <div class="preview-gallery">
+      <img src="pre1.jpg" alt="照片1">
+      <img src="pre2.jpg" alt="照片2">
+      <img src="pre3.jpg" alt="照片3">
+    </div>
     <input type="password" id="password" placeholder="密碼">
-    <button onclick="checkPassword()">確認</button>
-    <p id="error" style="color:red;"></p>
+    <button onclick="checkPassword()">送出</button>
+    <p id="error"></p>
   </div>
 
-  <div id="gallery">
-    <h1>美人魚寫真</h1>
+  <div id="gallery" style="display: none;">
+    <h1>這錢花得真值</h1>
     <div>
       <img src="photo1.jpg" alt="照片1">
       <img src="photo2.jpg" alt="照片2">
@@ -58,7 +114,6 @@
       <img src="photo36.jpg" alt="照片3">
       <img src="photo37.jpg" alt="照片3">
       <img src="photo38.jpg" alt="照片3">
-      <!-- 可以繼續加更多 -->
     </div>
   </div>
 
