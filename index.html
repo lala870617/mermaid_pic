@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>極限量私密寫真(大尺)</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    #gallery { display: none; }
+    img { max-width: 100%; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <div id="login">
+    <h2>請輸入密碼以查看私密圖片</h2>
+    <input type="password" id="password" placeholder="密碼">
+    <button onclick="checkPassword()">確認</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <div id="gallery">
+    <h1>美人魚寫真</h1>
+    <div>
+      <img src="images/photo1.jpg" alt="照片1">
+      <img src="images/photo2.jpg" alt="照片2">
+      <img src="images/photo3.jpg" alt="照片3">
+      <!-- 可以繼續加更多 -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
