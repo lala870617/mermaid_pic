@@ -63,13 +63,13 @@
 <body>
   <div id="login">
     <h2>請輸入密碼以查看私密圖片</h2>
-    <div class="preview-gallery">
+    <input type="password" id="password" placeholder="密碼">
+    <button onclick="checkPassword()">送出</button>
+	<div class="preview-gallery">
       <img src="pre1.jpg" alt="照片1">
       <img src="pre2.jpg" alt="照片2">
       <img src="pre3.jpg" alt="照片3">
     </div>
-    <input type="password" id="password" placeholder="密碼">
-    <button onclick="checkPassword()">送出</button>
     <p id="error"></p>
   </div>
 
